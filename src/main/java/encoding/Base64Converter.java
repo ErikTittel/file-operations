@@ -11,12 +11,20 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * | Charaters         | nö                            |
+ * | ISO-8859-1 Hex    | 6e f6                         |
+ * | ISO-8859-1 Binär  | 0110 1110 1111 0110           |
+ * | ISO-8859-1 Base64 | bvY=                          |
+ * | UTF-8 Hex         | 6e c3 b6                      |
+ * | UTF-8 Binär       | 0110 1110 1100 0011 1011 0110 |
+ * | UTF-8 Base64      | bsO2, 27 44 14 54             |
+ */
 public class Base64Converter {
 
     private static final int BUFFER_SIZE = 2048;
